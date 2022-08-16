@@ -1,7 +1,5 @@
 package hellojpa.ex5;
 
-import hellojpa.ex1.Member;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -27,7 +25,7 @@ public class JpaMain4 {
 
             People3 people = new People3();
             people.setName("People1");
-            people.setTeam(team);
+            people.changeTeam(team);
             em.persist(people);
 
             em.flush();
