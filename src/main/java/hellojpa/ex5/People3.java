@@ -6,12 +6,12 @@ import lombok.Setter;
 import javax.persistence.*;
 
 /**
- * 객체지향모델링
+ * 양방향 연관관계 (양방향 매핑)
  */
-//@Entity
+@Entity
 @Table(name = "People")
 @Getter @Setter
-public class People2 {
+public class People3 {
 
     @Id
     @GeneratedValue
@@ -23,5 +23,5 @@ public class People2 {
 
     @ManyToOne
     @JoinColumn(name = "TEAM_ID")
-    private Team team;
+    private Team2 team;
 }
