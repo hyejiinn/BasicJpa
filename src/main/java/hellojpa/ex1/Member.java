@@ -10,7 +10,7 @@ import javax.persistence.Id;
  * @Entity : JPA가 관리할 객체
  * @Id : 데이터베이스 PK와 매핑
  */
-@Entity
+//@Entity
 @Getter @Setter
 public class Member {
 
