@@ -8,7 +8,7 @@ import javax.persistence.*;
 /**
  * 양방향 연관관계 (양방향 매핑)
  */
-@Entity
+//@Entity
 @Table(name = "People")
 @Getter @Setter
 public class People3 {

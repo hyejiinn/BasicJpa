@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 양방향 연관관계 (양방향 매핑)
  */
-@Entity
+//@Entity
 @Table(name = "Team")
 @Getter @Setter
 public class Team2 {
