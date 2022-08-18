@@ -15,7 +15,8 @@ public class Member {
 
     private String name;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY) // 지연 로딩
+//    @ManyToOne(fetch = FetchType.EAGER) // 즉시 로딩
     @JoinColumn(name = "TEAM_ID")
     private Team team;
 }
