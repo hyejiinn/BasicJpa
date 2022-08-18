@@ -6,7 +6,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Getter @Setter
-@Entity
+//@Entity
 //@Inheritance(strategy = InheritanceType.JOINED) // 조인 전략
 //@Inheritance(strategy = InheritanceType.SINGLE_TABLE) // 단일 테이블 전략
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) // 구현 테이블 마다 전략
