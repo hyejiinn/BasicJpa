@@ -1,16 +1,12 @@
-package hellojpa.ex9;
+package hellojpa.ex10;
 
-<<<<<<< HEAD
 import hellojpa.ex8.Member;
-=======
->>>>>>> origin/master
-import org.hibernate.Hibernate;
+import hellojpa.ex9.Address;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-<<<<<<< HEAD
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -18,11 +14,6 @@ import java.util.List;
 
 /**
  * JPQL 소개
-=======
-
-/**
- * 값타입
->>>>>>> origin/master
  */
 public class JpaMain {
     public static void main(String[] args) {
@@ -34,8 +25,6 @@ public class JpaMain {
         tx.begin();
 
         try {
-
-<<<<<<< HEAD
             // 1) JPQL 소개
             List<Member> result = em.createQuery("select m from Member m where m.name like '%hello%'", Member.class).getResultList();
 
@@ -63,26 +52,6 @@ public class JpaMain {
 
             // 3) Native SQL
             em.createNativeQuery("select MEMBER_ID, name from MEMBER").getResultList();
-
-=======
-            Address address = new Address("city", "street", "10000");
-
-            Member member = new Member();
-            member.setName("member1");
-            member.setHomeAddress(address);
-            em.persist(member);
-
-            Address copyAddress = new Address(address.getCity(), address.getStreet(), address.getZipcode());
-
-            Member member2 = new Member();
-            member2.setName("member2");
-            member2.setHomeAddress(copyAddress);
-            em.persist(member2);
-
-            // city 변경 -> member1, member2의 city 모두 변경되버림,, side effect 발생
-            // 해결 방법 : 값 복사해서 사용하기
-            member.getHomeAddress().setCity("new city");
->>>>>>> origin/master
 
             tx.commit();
         } catch (Exception e) {
