@@ -35,6 +35,7 @@ public class JpaMain2 {
             em.clear();
 
             Member findMember = em.find(Member.class, member.getId());
+            System.out.println("findMember.getClass() = " + findMember.getClass());
             System.out.println("findMember.getTeam().getClass() = " + findMember.getTeam().getClass());
 
             System.out.println("=================");
